@@ -75,37 +75,6 @@ asynchronous pulse capture
 synchronous sampling at 200 MHz
 thermometer-code decoding
 fine timestamp extraction
-The overall reconstruction flow is:
-
-START / STOP
-     │
-     ▼
-┌──────────────────────┐
-│  CARRY4 Delay Line   │
-│      256 taps        │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ Thermometer Decoder  │
-└──────────┬───────────┘
-           │
-           ▼
-     Fine Timestamp
-           │
-           ├──────────────┐
-           │              │
-           ▼              ▼
-   Coarse Counter    Calibration LUT
-           │              │
-           └──────┬───────┘
-                  ▼
-           Timestamp Reconstruction
-                  │
-                  ▼
-                T_ToF
-
-The coarse stage provides the clock-cycle count, while the TDL provides the sub-clock timing information.
 
 🧩 FPGA Implementation
 The time-critical measurement path is implemented in the programmable logic (PL) of the Zynq-7020.
