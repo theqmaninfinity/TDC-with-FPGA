@@ -18,7 +18,6 @@ In other words, it tries to answer the very simple question:
 
 The measured time is reconstructed as:
 
-```text
 T_ToF = N_coarse × T₀ + τ_start − τ_stop
 where the coarse clock period is:
 T₀ = 5 ns
