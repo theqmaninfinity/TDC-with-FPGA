@@ -36,7 +36,7 @@ text
 where the coarse clock period is:
 T₀ = 5 ns
 
-text
+
 
 corresponding to a 200 MHz reference clock.
 
@@ -73,7 +73,7 @@ Time Reconstruction
 │
 STOP
 
-text
+
 
 In essence, the architecture combines a coarse counter for large‑scale timing with a carry‑chain delay line for sub‑clock resolution.
 
