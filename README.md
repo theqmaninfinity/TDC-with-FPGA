@@ -41,40 +41,6 @@ T₀ = 5 ns
 corresponding to a 200 MHz reference clock.
 
 The coarse counter tracks the large-scale timing interval, while the fine tapped delay line (TDL) determines where each asynchronous event occurred within that 5 ns clock period.
-START
-│
-▼
-┌───────────────────┐
-│ 256-tap CARRY4 │
-│ TDL │
-└─────────┬─────────┘
-│
-▼
-Fine Timestamp
-│
-▼
-┌───────────────────┐
-│ Coarse Counter │
-│ 200 MHz / 5 ns │
-└─────────┬─────────┘
-│
-▼
-Coarse + Fine Data
-│
-▼
-Time Reconstruction
-▲
-│
-┌─────────┴─────────┐
-│ 256-tap CARRY4 │
-│ TDL │
-└─────────┬─────────┘
-▲
-│
-STOP
-
-
-
 In essence, the architecture combines a coarse counter for large‑scale timing with a carry‑chain delay line for sub‑clock resolution.
 
 ---
